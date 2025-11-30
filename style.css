@@ -1,0 +1,142 @@
+/* --- GENEL SIFIRLAMA (RESET) --- */
+/* Eklenti içindeki her şeyin kutu modelini ve fontunu sabitleyelim */
+#smart-select-popup, 
+#smart-select-popup * {
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif !important;
+    margin: 0;
+    padding: 0;
+    text-shadow: none !important; /* Siteden gelen gölgeleri kaldır */
+}
+
+/* --- ANA KAPSAYICI --- */
+#smart-select-popup {
+    position: absolute;
+    display: none;
+    background-color: #202124 !important; /* Koyu Gri */
+    color: #e8eaed !important; /* Açık Gri Yazı */
+    border-radius: 8px;
+    padding: 6px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    z-index: 2147483647; /* En üst katman */
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+    border: 1px solid #3c4043; /* Hafif bir çerçeve */
+}
+
+/* --- BUTONLARIN GENEL HALİ --- */
+.smart-select-btn {
+    background: transparent !important;
+    border: none !important;
+    color: #e8eaed !important; /* Yazı rengini zorla beyaz yap */
+    cursor: pointer;
+    padding: 6px 10px !important;
+    border-radius: 4px;
+    font-size: 13px !important;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    line-height: normal !important;
+}
+
+.smart-select-btn:hover {
+    background-color: #3c4043 !important; /* Hover rengi */
+}
+
+/* --- AYRAÇ ÇİZGİSİ --- */
+.smart-divider {
+    width: 1px;
+    height: 20px;
+    background-color: #5f6368 !important;
+    margin: 0 2px;
+}
+
+/* --- DROPDOWN (AÇILIR MENÜ) --- */
+.dropdown-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    /* Arka plan rengini zorla koyu yap */
+    background-color: #303134 !important; 
+    border: 1px solid #5f6368 !important;
+    border-radius: 6px;
+    padding: 4px !important;
+    flex-direction: column;
+    min-width: 150px; /* Genişlik */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+    margin-top: 8px;
+    z-index: 2147483648; /* Popup'tan da yukarıda */
+}
+
+/* Dropdown içindeki butonlar */
+.dropdown-menu button {
+    text-align: left;
+    width: 100%;
+    padding: 8px 10px !important;
+    font-size: 13px !important;
+    border: none !important;
+    background: transparent !important;
+    /* Yazı rengini zorla beyaz yap */
+    color: #e8eaed !important; 
+    cursor: pointer;
+    border-radius: 4px;
+    display: block; /* Alt alta dizilsinler */
+}
+
+/* Dropdown butonlarının üzerine gelince */
+.dropdown-menu button:hover {
+    background-color: #45474a !important; /* Daha açık gri */
+    color: #ffffff !important; /* Tam beyaz */
+}
+
+/* Mouse üzerine gelince menüyü göster */
+.dropdown-wrapper:hover .dropdown-menu {
+    display: flex;
+}
+
+/* --- ÖZEL KOMUT GİRİŞ ALANI --- */
+.custom-input-container {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 2px;
+}
+
+.custom-prompt-input {
+    background-color: #303134;
+    border: 1px solid #5f6368;
+    color: white;
+    padding: 6px 8px;
+    border-radius: 4px;
+    outline: none;
+    font-size: 13px;
+    width: 200px; /* Genişlik */
+}
+
+.custom-prompt-input:focus {
+    border-color: #8ab4f8; /* Odaklanınca mavi olsun */
+}
+
+.custom-submit-btn {
+    background-color: #8ab4f8;
+    color: #202124;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+.custom-submit-btn:hover {
+    background-color: #aecbfa;
+}

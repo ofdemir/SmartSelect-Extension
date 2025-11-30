@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "Smart Select Assistant",
+  "version": "1.0",
+  "description": "Seçili metni AI Asistan ile işle, çevir veya kopyala.",
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "css": ["style.css"]
+    }
+  ]
+}
