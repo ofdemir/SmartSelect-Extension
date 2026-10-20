@@ -1,1 +1,7 @@
 /API Key.txt
+# AI_SPACE
+.env
+.env.*
+!.env.example
+node_modules/
+.ai/state.json

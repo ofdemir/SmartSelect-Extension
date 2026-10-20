@@ -1,0 +1,12 @@
+# Proje türü: cli | lib | api | web | desktop | mobile
+# Chrome eklentisi (Manifest V3, derleme adımı yok) — arayüzlü olduğu için "web".
+type = "web"
+
+# Bağımlılıksız: Node'un yerleşik test koşucusu. Eklenti kodu tests/ altından chrome.* sahtesiyle yüklenir.
+test_cmd = "node --test tests/"
+# Sözdizimi denetimi (bağımlılık yok)
+lint_cmd = "node --check background.js && node --check content.js"
+security_cmd = ""
+
+# Test dosyası kalıpları: test ajanı yalnızca bunlara yazabilir, uygulayıcı bunlara dokunamaz.
+test_globs = ["tests/*", "tests/**/*"]
