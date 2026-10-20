@@ -21,4 +21,4 @@ Test ve lint komutları `.ai/project.toml` içinde tanımlıdır; orkestratör o
 - npm bağımlılığı ya da derleme adımı ekleme (açıkça plana yazılmadıkça).
 - API anahtarını koda gömme; repoya anahtar commit'leme.
 - `manifest.json` izinlerini genişletmek güvenlik etkisidir: plana gerekçesiyle yaz.
-- Çalışma dalı `ai-space`; upstream `main`'e doğrudan yazılmaz.
+- Geliştirme dalı `develop`; `main` yalnızca sürüm (upstream ile ortak). Sürüm dışında `main`e yazılmaz.
